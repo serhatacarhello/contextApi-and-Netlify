@@ -15,7 +15,8 @@ const Footer = () => {
             className="btn btn-primary me-3"
             onClick={() => toggleTheme()}
           >
-            Change Theme:{theme}
+            Active Theme:
+            <span className="badge text-warning text-uppercase"> {theme}</span>
           </button>
         </div>
         <div className="leftSide">
