@@ -6,7 +6,7 @@ const Footer = () => {
   const { lang, setLang } = useContext(LangContext);
 
   return (
-    <div>
+    <div className="container container-fluid position-sticky bottom-0 start-0 flex-grow-1">
       Footer Component Active Theme: {theme}
       <hr />
       Active Lang: {lang}
