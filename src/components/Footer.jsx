@@ -6,16 +6,44 @@ const Footer = () => {
   const { lang, setLang } = useContext(LangContext);
 
   return (
-    <div className="container container-fluid position-sticky bottom-0 start-0 flex-grow-1">
-      Footer Component Active Theme: {theme}
-      <hr />
-      Active Lang: {lang}
-      <button onClick={() => toggleTheme()}>Change Theme</button>
+    <div className="container container-fluid bottom-0 start-0 flex-grow-1">
       <p> Footer Component </p>
-      <button onClick={() => setLang("tr")}>TR</button>
-      <button onClick={() => setLang("en")}>EN</button>
-      <button onClick={() => setLang("de")}>DE</button>
-      <p> Footer Component </p>
+      <div className="buttons d-flex align-items-center justify-content-between">
+        <div className="rightSide">
+          <button
+            type="button"
+            className="btn btn-primary me-3"
+            onClick={() => toggleTheme()}
+          >
+            Change Theme:{theme}
+          </button>
+        </div>
+        <div className="leftSide">
+          <button
+            type="button"
+            className="btn btn-primary me-3"
+            onClick={() => setLang("tr")}
+          >
+            TR
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary me-3"
+            onClick={() => setLang("en")}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary me-3"
+            onClick={() => setLang("de")}
+          >
+            DE
+          </button>
+          Active Lang:{" "}
+          <span className="badge bg-primary text-warning">{lang}</span>
+        </div>
+      </div>
     </div>
   );
 };
